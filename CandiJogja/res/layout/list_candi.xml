@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layoutPencarian"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <AutoCompleteTextView
+            android:id="@+id/etCari"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnCari"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:onClick="cari"
+            android:background="@drawable/tombol_search" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvCandi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/txtNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Hasil Pencarian Tidak Ditemukan"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
+
+</LinearLayout>
